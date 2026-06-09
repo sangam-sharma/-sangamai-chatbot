@@ -1,45 +1,111 @@
-# ChatBot Starter with Streamlit, OpenAI, and LangChain
+# 🤖 SangamAI — Personal AI Assistant
 
-This repository contains a simple yet powerful chatbot built with Streamlit, OpenAI, and LangChain. The chatbot maintains conversational memory, meaning it can reference past exchanges in its responses.
+A smart, conversational AI assistant built with **OpenAI GPT**, **LangChain**, and **Streamlit**. SangamAI can answer any question, help with writing, explain concepts, give advice, and much more — all while remembering the context of your conversation.
 
-## Overview
+---
 
-The chatbot is a demonstration of integrating OpenAI's GPT model, the LangChain library, and Streamlit for creating interactive web applications. The bot's conversational memory allows it to maintain context during the chat session, leading to a more coherent and engaging user experience. Importantly, this feature-rich chatbot application is implemented in less than 40 lines of code (excluding whitespace and comments)!
+## 🚀 Live Demo
 
-### Key Features
+> Run locally by following the steps below
 
-- **Streamlit:** A powerful, fast Python framework used to create the web interface for the chatbot.
-- **OpenAI's GPT:** A state-of-the-art language processing AI model that generates the chatbot's responses.
-- **LangChain:** A wrapper library for the ChatGPT model that helps manage conversation history and structure the model's responses.
+---
 
-## Demo App
+## ✨ Features
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://chatbot-starter.streamlit.app/)
+- 💬 **Conversational Memory** — remembers previous messages in the chat for context-aware responses
+- 🧠 **Powered by GPT-3.5** — uses OpenAI's state-of-the-art language model
+- 🦜 **LangChain Integration** — manages message history and prompt structure
+- ⚡ **Streamlit UI** — clean, fast, and interactive web interface
+- 🗑️ **Clear Chat** — reset the conversation anytime from the sidebar
+- 🌐 **General Purpose** — ask anything, get helpful and friendly responses
 
-## How to Run
+---
 
-### Prerequisites
+## 🛠️ Tech Stack
 
-- Python 3.6 or higher
-- Streamlit
-- LangChain
-- OpenAI API key
+| Technology | Purpose |
+|---|---|
+| Python | Core programming language |
+| Streamlit | Web UI framework |
+| LangChain | LLM framework & memory management |
+| OpenAI GPT-3.5 | Language model for responses |
+| python-dotenv | Environment variable management |
 
-### Steps
+---
 
-1. Clone this repository.
-2. Install the necessary Python packages using the command `pip install -r requirements.txt`.
-3. Set the environment variable for your OpenAI API key.
-4. Run the Streamlit app using the command `streamlit run streamlit_app.py`.
+## 📦 Installation & Setup
 
-## Usage
+### 1. Clone the repository
+```bash
+git clone https://github.com/sangam-sharma/-sangamai-chatbot.git
+cd -sangamai-chatbot
+```
 
-The chatbot starts with a system message that sets the tone for the conversation. It then alternates between receiving user inputs and generating AI responses. The conversation history is stored and used as context for generating future responses, allowing the chatbot to maintain conversational continuity.
+### 2. Install dependencies
+```bash
+pip install -r requirements.txt
+```
 
-## Contribution
+### 3. Set up your API key
+Create a `.env` file in the root folder and add:
+```
+OPENAI_API_KEY=your_openai_api_key_here
+```
+> Get your free API key at [platform.openai.com](https://platform.openai.com)
 
-Contributions, issues, and feature requests are welcome. Feel free to check the [Issues](https://github.com/AustonianAI/chatbot-starter/issues) page if you want to contribute.
+### 4. Run the app
+```bash
+streamlit run streamlit_app.py
+```
 
-## License
+### 5. Open in browser
+Go to `http://localhost:8501` and start chatting! 🎉
 
-This project is licensed under the terms of the MIT license.
+---
+
+## 📁 Project Structure
+
+```
+sangamai-chatbot/
+├── streamlit_app.py      # Main application file
+├── requirements.txt      # Python dependencies
+├── .env.example          # Example environment variables
+├── .gitignore            # Git ignore rules
+└── README.md             # Project documentation
+```
+
+---
+
+## 🧠 How It Works
+
+1. User types a message in the chat input
+2. The message is added to the conversation history
+3. LangChain builds a full message list including the system prompt and history
+4. OpenAI GPT-3.5 generates a response based on the full context
+5. The response is displayed and added to memory for future turns
+
+---
+
+## 🔮 Future Improvements
+
+- [ ] Add support for multiple AI models (Gemini, Claude)
+- [ ] Upload documents and chat with them (RAG)
+- [ ] Voice input and output
+- [ ] Deploy on Streamlit Cloud
+
+---
+
+## 👨‍💻 Author
+
+**Sangam Sharma**
+- GitHub: [@sangam-sharma](https://github.com/sangam-sharma)
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+> Built with ❤️ using OpenAI, LangChain, and Streamlit
